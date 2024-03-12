@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kertolasku ja Jakolasku</title>
+
+<script>
+function multiplyNumbers() {
+  // Hae syötetyt arvot
+  var number1 = document.getElementById('number1').value;
+  var number2 = document.getElementById('number2').value;
+
+  // Suorita kertolasku
+  var result = number1 * number2;
+
+  // Näytä tulos
+  document.getElementById('result').innerHTML = result;
+}
+
+function divideNumbers() {
+  // Hae syötetyt arvot
+  var number1 = document.getElementById('number1').value;
+  var number2 = document.getElementById('number2').value;
+
+  // Suorita jakolasku, tarkista että jakaja ei ole nolla
+  var result = number2 != 0 ? number1 / number2 : "Ei määritelty";
+
+  // Näytä tulos
+  document.getElementById('result').innerHTML = result;
+}
+</script>
+
+</head>
+<body>
+
+<h2>Kertolasku ja Jakolasku Lomake</h2>
+
+<label for="number1">1st Number: </label>
+<input type="number" id="number1" name="number1"><br><br>
+
+<label for="number2">2nd Number: </label>
+<input type="number" id="number2" name="number2"><br><br>
+
+<button onclick="multiplyNumbers()">Multiply</button>
+<button onclick="divideNumbers()">Divide</button><br><br>
+
+<p>The Result Is : <span id="result"></span></p>
+
+</body>
+</html>
